@@ -3,7 +3,9 @@ import { svgGenerator } from "./svgGenerator.js";
 
 function game() {
   const body = document.querySelector("body");
+
   const game = elementGenerator("div");
+  const header = elementGenerator("h1");
   const dialContainer = elementGenerator("div");
   const leftDial = svgGenerator("svg");
   const leftCircle = svgGenerator("circle");
@@ -11,6 +13,8 @@ function game() {
   const rightCircle = svgGenerator("circle");
 
   game.setAttribute("class", "game");
+  header.textContent = "etch-a-sketch";
+  header.setAttribute("class", "header");
   dialContainer.setAttribute("class", "dial-container");
   leftDial.setAttribute("id", "left-dial");
   leftDial.setAttribute("viewBox", "0 0 100 100");
@@ -35,6 +39,7 @@ function game() {
   rightDial.append(rightCircle);
   dialContainer.append(rightDial);
   dialContainer.prepend(leftDial);
+  game.append(header);
   game.append(dialContainer);
   body.prepend(game);
 }

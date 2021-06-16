@@ -11,11 +11,15 @@ body {
   margin: auto;
 }
 
+.header {
+  text-align: center;
+}
+
 .dial-container {
   display: flex;
   justify-content: space-between;
   width: 900px;
   position: relative;
-  top: 800px;
+  top: 700px;
   left: 50px;
 }
