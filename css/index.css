@@ -1,3 +1,7 @@
+:root {
+  --game-red: rgb(181, 44, 44);
+}
+
 body {
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -5,21 +9,38 @@ body {
 .game {
   width: 1000px;
   height: 900px;
-  border: 1em solid rgb(181, 44, 44);
+  border: 1em solid var(--game-red);
   border-radius: 4em;
-  background-color: rgb(181, 44, 44, 0.2);
+  background-color: var(--game-red);
   margin: auto;
 }
 
 .header {
   text-align: center;
+  font-family: "Gloria Hallelujah", cursive;
+}
+
+.grid {
+  height: 650px;
+  margin: auto;
+  width: 900px;
+  background: white;
 }
 
 .dial-container {
   display: flex;
   justify-content: space-between;
+  align-content: center;
   width: 900px;
   position: relative;
-  top: 700px;
+  top: 25px;
   left: 50px;
+}
+
+.reset-btn {
+  height: 1.5em;
+  font-size: 2em;
+  border: 0.125em solid black;
+  border-radius: 0.25em;
+  color: var(--game-red);
 }

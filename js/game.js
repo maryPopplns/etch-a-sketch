@@ -6,8 +6,10 @@ function game() {
 
   const game = elementGenerator("div");
   const header = elementGenerator("h1");
+  const grid = elementGenerator("div");
   const dialContainer = elementGenerator("div");
   const leftDial = svgGenerator("svg");
+  const resetBtn = elementGenerator("button");
   const leftCircle = svgGenerator("circle");
   const rightDial = svgGenerator("svg");
   const rightCircle = svgGenerator("circle");
@@ -15,33 +17,38 @@ function game() {
   game.setAttribute("class", "game");
   header.textContent = "etch-a-sketch";
   header.setAttribute("class", "header");
+  grid.setAttribute("class", "grid");
   dialContainer.setAttribute("class", "dial-container");
-  leftDial.setAttribute("id", "left-dial");
-  leftDial.setAttribute("viewBox", "0 0 100 100");
-  leftDial.setAttribute("width", "100px");
-  leftDial.setAttribute("height", "100px");
-  leftDial.setAttribute("fill", "white");
-  leftCircle.setAttribute("class", "inner-circle");
-  leftCircle.setAttribute("cy", "50");
-  leftCircle.setAttribute("cx", "50");
-  leftCircle.setAttribute("r", "50");
-  rightDial.setAttribute("id", "right-dial");
-  rightDial.setAttribute("viewBox", "0 0 100 100");
-  rightDial.setAttribute("width", "100px");
-  rightDial.setAttribute("height", "100px");
-  rightDial.setAttribute("fill", "white");
-  rightCircle.setAttribute("class", "inner-circle");
-  rightCircle.setAttribute("cy", "50");
-  rightCircle.setAttribute("cx", "50");
-  rightCircle.setAttribute("r", "50");
+  resetBtn.textContent = "reset";
+  resetBtn.setAttribute("class", "reset-btn");
+  resetBtn.setAttribute("type", "button");
 
+  (function buttonGenerator() {
+    const nodes = [leftDial, rightDial];
+    const circles = [leftCircle, rightCircle];
+    const sides = ["left", "right"];
+    for (let i = 0; i < 2; i++) {
+      nodes[i].setAttribute("id", `${sides[i]}-dial`);
+      nodes[i].setAttribute("viewBox", "0 0 100 100");
+      nodes[i].setAttribute("width", "100px");
+      nodes[i].setAttribute("height", "100px");
+      nodes[i].setAttribute("fill", "white");
+      circles[i].setAttribute("class", "inner-circle");
+      circles[i].setAttribute("cy", "50");
+      circles[i].setAttribute("cx", "50");
+      circles[i].setAttribute("r", "50");
+    }
+  })();
+
+  body.prepend(game);
+  game.append(header);
+  game.append(grid);
+  game.append(dialContainer);
+  dialContainer.prepend(leftDial);
+  dialContainer.append(resetBtn);
+  dialContainer.append(rightDial);
   leftDial.append(leftCircle);
   rightDial.append(rightCircle);
-  dialContainer.append(rightDial);
-  dialContainer.prepend(leftDial);
-  game.append(header);
-  game.append(dialContainer);
-  body.prepend(game);
 }
 
 export { game };
