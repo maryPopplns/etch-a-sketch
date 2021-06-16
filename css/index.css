@@ -1,0 +1,21 @@
+body {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.game {
+  width: 1000px;
+  height: 900px;
+  border: 1em solid rgb(181, 44, 44);
+  border-radius: 4em;
+  background-color: rgb(181, 44, 44, 0.2);
+  margin: auto;
+}
+
+.dial-container {
+  display: flex;
+  justify-content: space-between;
+  width: 900px;
+  position: relative;
+  top: 800px;
+  left: 50px;
+}
