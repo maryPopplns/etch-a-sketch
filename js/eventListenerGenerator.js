@@ -1,6 +1,7 @@
 function eventListenerGenerator() {
   const tiles = document.querySelectorAll(".tiles");
   const resetBtn = document.querySelector(".reset-btn");
+  const game = document.querySelector(".game");
 
   tiles.forEach((e) => {
     e.addEventListener("mouseenter", (e) => {
@@ -9,6 +10,8 @@ function eventListenerGenerator() {
     });
   });
   resetBtn.addEventListener("click", () => {
+    game.setAttribute("class", "rotating");
+    setTimeout(() => game.setAttribute("class", "game"), 150);
     tiles.forEach((e) => {
       if (e.classList.value === "shaken") {
         e.setAttribute("class", "tiles");

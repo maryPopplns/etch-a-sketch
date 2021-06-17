@@ -16,6 +16,25 @@ body {
   margin: auto;
 }
 
+.rotating {
+  width: 700px;
+  height: 800px;
+  border: 1em solid var(--game-red);
+  border-radius: 4em;
+  background-color: var(--game-red);
+  margin: auto;
+  animation: rotation 100ms 1 linear;
+}
+
+@keyframes rotation {
+  50% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 .header {
   text-align: center;
   font-family: "Gloria Hallelujah", cursive;
