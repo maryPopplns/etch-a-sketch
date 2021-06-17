@@ -1,7 +1,7 @@
 import { elementGenerator } from "./elementGenerator.js";
 import { svgGenerator } from "./svgGenerator.js";
 import { gridGenerator } from "./grid.js";
-import { hoverHandler } from "./hoverHandler.js";
+import { eventListenerGenerator } from "./eventListenerGenerator.js";
 
 function game() {
   const body = document.querySelector("body");
@@ -53,6 +53,7 @@ function game() {
   rightDial.append(rightCircle);
 
   gridGenerator();
+  eventListenerGenerator();
 }
 
 export { game };
