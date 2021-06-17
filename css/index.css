@@ -14,7 +14,6 @@ body {
   border-radius: 4em;
   background-color: var(--game-red);
   margin: auto;
-  cursor: crosshair;
 }
 
 .rotating {
@@ -49,6 +48,7 @@ body {
   margin: auto;
   width: 550px;
   background: white;
+  cursor: crosshair;
 }
 
 .active-tiles {
