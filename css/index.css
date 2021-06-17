@@ -7,8 +7,8 @@ body {
 }
 
 .game {
-  width: 1000px;
-  height: 900px;
+  width: 700px;
+  height: 800px;
   border: 1em solid var(--game-red);
   border-radius: 4em;
   background-color: var(--game-red);
@@ -21,17 +21,16 @@ body {
 }
 
 .grid {
-  height: 650px;
+  height: 550px;
   margin: auto;
-  width: 900px;
+  width: 550px;
   background: white;
 }
 
 .dial-container {
   display: flex;
   justify-content: space-between;
-  align-content: center;
-  width: 900px;
+  width: 600px;
   position: relative;
   top: 25px;
   left: 50px;
