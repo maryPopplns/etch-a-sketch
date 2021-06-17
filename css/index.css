@@ -31,8 +31,8 @@ body {
   background: white;
 }
 
-.tiles {
-  border: 0.25px solid black;
+.hovered {
+  background-color: black;
 }
 
 .dial-container {
