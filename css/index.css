@@ -1,5 +1,6 @@
 :root {
   --game-red: rgb(181, 44, 44);
+  --grid-count: 50;
 }
 
 body {
@@ -21,10 +22,17 @@ body {
 }
 
 .grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-count), 1fr);
+  grid-template-rows: repeat(var(--game-red), 1fr);
   height: 550px;
   margin: auto;
   width: 550px;
   background: white;
+}
+
+.tiles {
+  border: 0.25px solid black;
 }
 
 .dial-container {

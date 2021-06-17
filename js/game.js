@@ -1,6 +1,7 @@
 import { elementGenerator } from "./elementGenerator.js";
 import { svgGenerator } from "./svgGenerator.js";
 import { gridGenerator } from "./grid.js";
+import { hoverHandler } from "./hoverHandler.js";
 
 function game() {
   const body = document.querySelector("body");
@@ -51,7 +52,7 @@ function game() {
   leftDial.append(leftCircle);
   rightDial.append(rightCircle);
 
-  let mine = gridGenerator();
+  gridGenerator();
 }
 
 export { game };
