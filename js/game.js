@@ -1,5 +1,6 @@
 import { elementGenerator } from "./elementGenerator.js";
 import { svgGenerator } from "./svgGenerator.js";
+import { gridGenerator } from "./grid.js";
 
 function game() {
   const body = document.querySelector("body");
@@ -49,6 +50,8 @@ function game() {
   dialContainer.append(rightDial);
   leftDial.append(leftCircle);
   rightDial.append(rightCircle);
+
+  let mine = gridGenerator();
 }
 
 export { game };
