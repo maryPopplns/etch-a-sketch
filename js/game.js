@@ -21,7 +21,7 @@ function game() {
   header.setAttribute("class", "header");
   grid.setAttribute("class", "grid");
   dialContainer.setAttribute("class", "dial-container");
-  resetBtn.textContent = "reset";
+  resetBtn.textContent = "shake";
   resetBtn.setAttribute("class", "reset-btn");
   resetBtn.setAttribute("type", "button");
 

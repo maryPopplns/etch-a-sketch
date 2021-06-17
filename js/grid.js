@@ -5,7 +5,7 @@ function gridGenerator() {
     let element = document.createElement("div");
     element.setAttribute("class", "tiles");
     element.setAttribute("id", `${i + 1}`);
-    // grid.append(element);
+    grid.append(element);
   }
 }
 

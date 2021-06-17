@@ -31,8 +31,12 @@ body {
   background: white;
 }
 
-.hovered {
+.active-tiles {
   background-color: black;
+}
+
+.shaken {
+  background-color: rgb(0, 0, 0, 0.5);
 }
 
 .dial-container {
