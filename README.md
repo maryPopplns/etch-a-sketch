@@ -1,3 +1,5 @@
+[link](https://marypopplns.github.io/etch-a-sketch/)
+
 - learned the basics of css grid
 - learned how to generate multiple elements / event listeners with a loop
 - learned how to create transitions as well as animations (used animations to make the toy shake)
